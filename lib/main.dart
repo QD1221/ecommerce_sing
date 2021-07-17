@@ -4,10 +4,14 @@ import 'package:ecommerce_sing/config/app_router.dart';
 import 'package:ecommerce_sing/config/theme.dart';
 import 'package:ecommerce_sing/screens/home/home_screen.dart';
 import 'package:ecommerce_sing/screens/splash/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  Bloc.observer = BlocObserver();
   runApp(MyApp());
 }
 

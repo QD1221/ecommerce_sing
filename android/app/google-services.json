@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22051207346",
+    "project_id": "ecommerce-sing",
+    "storage_bucket": "ecommerce-sing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22051207346:android:6dc3b403c948e733a8f1ab",
+        "android_client_info": {
+          "package_name": "com.qd.ecommerce_sing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22051207346-5cqvjhrijk4fp91sp9032vduhcpsp0v1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb6ShvywTOz710soFyjLoHgRs9YtCegWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22051207346-5cqvjhrijk4fp91sp9032vduhcpsp0v1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
