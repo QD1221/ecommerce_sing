@@ -1,7 +1,11 @@
 import 'package:ecommerce_sing/blocs/cart/cart_bloc.dart';
+import 'package:ecommerce_sing/blocs/category/category_bloc.dart';
+import 'package:ecommerce_sing/blocs/product/product_bloc.dart';
 import 'package:ecommerce_sing/blocs/wishlist/wishlist_bloc.dart';
 import 'package:ecommerce_sing/config/app_router.dart';
 import 'package:ecommerce_sing/config/theme.dart';
+import 'package:ecommerce_sing/repositories/category/category_repository.dart';
+import 'package:ecommerce_sing/repositories/product/product_repository.dart';
 import 'package:ecommerce_sing/screens/home/home_screen.dart';
 import 'package:ecommerce_sing/screens/splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,7 +26,21 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => WishlistBloc()..add(StartWishList())),
-        BlocProvider(create: (_) => CartBloc()..add(CartStarted()))
+        BlocProvider(create: (_) => CartBloc()..add(CartStarted())),
+        BlocProvider(
+          create: (_) => CategoryBloc(
+            categoryRepository: CategoryRepository(),
+          )..add(
+              LoadCategories(),
+            ),
+        ),
+        BlocProvider(
+          create: (_) => ProductBloc(
+            productRepository: ProductRepository(),
+          )..add(
+              LoadProducts(),
+            ),
+        ),
       ],
       child: MaterialApp(
         title: 'Quang Tran',
@@ -35,5 +53,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
