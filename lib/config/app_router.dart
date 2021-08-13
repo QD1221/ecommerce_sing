@@ -1,6 +1,7 @@
 import 'package:ecommerce_sing/models/models.dart';
 import 'package:ecommerce_sing/screens/cart/cart_screen.dart';
 import 'package:ecommerce_sing/screens/catalog/catalog_screen.dart';
+import 'package:ecommerce_sing/screens/checkout/checkout_screen.dart';
 import 'package:ecommerce_sing/screens/home/home_screen.dart';
 import 'package:ecommerce_sing/screens/product/product_screen.dart';
 import 'package:ecommerce_sing/screens/screens.dart';
@@ -25,7 +26,8 @@ class AppRouter {
         return ProductScreen.route(product: settings.arguments as Product);
       case WishlistScreen.routeName:
         return WishlistScreen.route();
-
+      case CheckoutScreen.routeName:
+        return CheckoutScreen.route();
       default:
         return _errorRoute();
     }
